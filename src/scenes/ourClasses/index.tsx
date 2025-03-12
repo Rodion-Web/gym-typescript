@@ -1,4 +1,4 @@
-import { SelectedPage, ClassType  } from "@/shared/types";
+import { SelectedPage, ClassType } from "@/shared/types";
 import image1 from "@/assets/image1.png";
 import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
@@ -59,7 +59,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
@@ -75,9 +75,9 @@ const OurClasses = ({ setSelectedPage }: Props) => {
             </p>
           </div>
         </motion.div>
-        <div className="ovetflow-x-auto mt-10 h-[353px] w-full overflow-y-hidden">
+        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
           <ul className="w-[2800px] whitespace-nowrap">
-            {classes.map((item, index) => (
+            {classes.map((item: ClassType, index) => (
               <Class
                 key={`${item.name}-${index}`}
                 name={item.name}
