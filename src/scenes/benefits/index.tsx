@@ -1,3 +1,4 @@
+import ActionButton from "@/shared/ActionButton";
 import HText from "@/shared/HText";
 import { BenefitType, SelectedPage } from "@/shared/types";
 import {
@@ -8,17 +9,16 @@ import {
 import { motion } from "framer-motion";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 import Benefit from "./Benefit";
-import ActionButton from "@/shared/ActionButton";
 
 const benefits: Array<BenefitType> = [
   {
-    icon: <HomeModernIcon className="h-6 w-6 " />,
+    icon: <HomeModernIcon className="h-6 w-6" />,
     title: "State of the Art Facilities",
     description:
       "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
   },
   {
-    icon: <UserGroupIcon className="h-6 w-6 " />,
+    icon: <UserGroupIcon className="h-6 w-6" />,
     title: "100's of Diverse Classes",
     description:
       "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
@@ -60,13 +60,14 @@ const Benefits = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText>MORE THAN JUST A GYM.</HText>
+          <HText>MORE THAN JUST GYM.</HText>
           <p className="my-5 text-sm">
             We provide world class fitness equipment, trainers and classes to
             get you to your ultimate fitness goals with ease. We provide true
             care into each and every member.
           </p>
         </motion.div>
+
         {/* BENEFITS */}
         <motion.div
           className="mt-5 items-center justify-between gap-8 md:flex"
@@ -86,7 +87,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           ))}
         </motion.div>
 
-        {/* GRAPHICS ANS DESCRIPTION */}
+        {/* GRAPHICS AND DESCRIPTION */}
         <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
           {/* GRAPHIC */}
           <img
@@ -99,7 +100,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           <div>
             {/* TITLE */}
             <div className="relative">
-              <div className="before:absolute before:-left-20 before:-top-20 before:z-[1] before:content-abstractwaves">
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -111,8 +112,8 @@ const Benefits = ({ setSelectedPage }: Props) => {
                   }}
                 >
                   <HText>
-                    MILLIONS OF HAPPY MEMBERS GETTING{"  "}
-                    <span className="text-primary-500">FIT</span>.
+                    MILLIONS OF HAPPY MEMBERS GETTING{" "}
+                    <span className="text-primary-500">FIT</span>
                   </HText>
                 </motion.div>
               </div>
